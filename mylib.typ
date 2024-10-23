@@ -1,3 +1,5 @@
+#import "@preview/fletcher:0.5.1" as fletcher: diagram, node, edge
+
 #let pr = math.partial
 #let d = math.dif
 #let limt(x, to) = $lim_(#x -> #to)$
@@ -153,3 +155,124 @@
     ]
   ]
 }
+
+#let fig1 = {
+    // text()[figure 1]
+    diagram(cell-size: 15pt, {
+        let (s, m1, m2, p) = (
+            (0, 0),
+            (0, -1),
+            (1, 0),
+            (1, -1)
+          )
+        node(s, $S$)
+        node(m1, $M$)
+        node(m2, $M$)
+        node(p, $P$)
+
+        edge(p, m1, "-")
+        edge(m1, m2, "-")
+        edge(m2, s, "-")
+    })
+}
+
+#let fig2 = {
+    diagram(cell-size: 15pt, {
+        let (s, m1, m2, p) = (
+            (0, 0),
+            (1, -1),
+            (1, 0),
+            (0, -1)
+          )
+        node(s, $S$)
+        node(m1, $M$)
+        node(m2, $M$)
+        node(p, $P$)
+
+        edge(p, m1, "-")
+        edge(m1, m2, "-")
+        edge(m2, s, "-")
+
+    })
+}
+
+#let fig3 = {
+    diagram(cell-size: 15pt, {
+        let (s, m1, m2, p) = (
+            (1, 0),
+            (0, -1),
+            (0, 0),
+            (1, -1)
+          )
+        node(s, $S$)
+        node(m1, $M$)
+        node(m2, $M$)
+        node(p, $P$)
+
+        edge(p, m1, "-")
+        edge(m1, m2, "-")
+        edge(m2, s, "-")
+
+    })
+}
+
+#let fig4 = {
+    diagram(cell-size: 15pt, {
+        let (s, m1, m2, p) = (
+            (1, 0),
+            (1, -1),
+            (0, 0),
+            (0, -1)
+          )
+        node(s, $S$)
+        node(m1, $M$)
+        node(m2, $M$)
+        node(p, $P$)
+
+        edge(p, m1, "-")
+        edge(m1, m2, "-")
+        edge(m2, s, "-")
+
+    })
+}
+
+
+#let syllogism(a, b, c) = {
+    // v(0.5pt)
+    block(
+        // height: 5pt,
+        width: 75pt,
+        // height: cm,
+        // spacing: 1pt,
+        // breakable: false,
+        [
+        // #v(0.1pt)
+        #a #h(1fr) #b
+        // #v(0.1pt)
+        // #a, #b
+        #layout(size => line(length: size.width, stroke: 1pt))
+        #align(center, c)
+        // #v(0.1pt)
+        ]
+    )
+}
+
+
+#let syllogism_large(a, b, c) = {
+    block(
+        width: 150pt,
+        spacing: 1em,
+        breakable: false,
+        [
+        #a #h(1fr) #b
+        #layout(size => line(length: size.width))
+        #align(center, c)
+        ]
+    )
+}
+
+
+#let def = "Определение"
+
+#let def(x) = {x
+ " Определение"}
