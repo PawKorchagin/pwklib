@@ -10,7 +10,7 @@
 #let prf(f, x) = $(#pr #f) / (#pr #x)$
 #let prt(x) = $(#pr f) / (#pr #x)$
 
-#let the = math.subset.sq
+#let the = math.supset.sq
 
 #let box-colors = (
   default: (stroke: luma(70), fill: white, title: white),
