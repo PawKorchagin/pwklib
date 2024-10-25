@@ -7,6 +7,9 @@
 
 #let lxyt(x, y, z) = $lim_((x, y, z) -> (#x, #y, #z))$
 
+#let prf(f, x) = $(#pr #f) / (#pr #x)$
+#let prt(x) = $(#pr f) / (#pr #x)$
+
 #let box-colors = (
   default: (stroke: luma(70), fill: white, title: white),
   red: (stroke: rgb(237, 32, 84), fill: rgb(253, 228, 224), title: white),
