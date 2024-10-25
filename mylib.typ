@@ -3,6 +3,9 @@
 #let pr = math.partial
 #let d = math.dif
 #let limt(x, to) = $lim_(#x -> #to)$
+#let where(x) = text(baseline: 5pt, size: 7pt)[#x]
+
+#let lxyt(x, y, z) = $lim_((x, y, z) -> (#x, #y, #z))$
 
 #let box-colors = (
   default: (stroke: luma(70), fill: white, title: white),
@@ -276,3 +279,9 @@
 
 #let def(x) = {x
  " Определение"}
+
+#let limxy(a, b) = $lim_((x, y) -> (#a, #b))$
+
+#let plim = $lim_(r->0)$
+
+#let so = $#line(angle: 90deg) =>$
