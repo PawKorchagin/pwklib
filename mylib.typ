@@ -290,3 +290,5 @@
 #let plim = $lim_(r->0)$
 
 #let so = $#line(angle: 90deg) =>$
+
+#let bc(op, th) = $ limits(#op)_(#th) $
