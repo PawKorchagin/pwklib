@@ -9,7 +9,7 @@
 
 #let prf(f, x) = $(#pr #f) / (#pr #x)$
 #let prt(x) = $(#pr f) / (#pr #x)$
-
+#let ev(val) = $#rotate(90deg)[$ " "#rotate(90deg)[#val] = " "$]$
 #let the = math.supset.sq
 
 #let box-colors = (
