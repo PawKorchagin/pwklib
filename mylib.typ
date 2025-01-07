@@ -9,8 +9,12 @@
 
 #let prf(f, x) = $(#pr #f) / (#pr #x)$
 #let prt(x) = $(#pr f) / (#pr #x)$
-#let ev(val) = $#rotate(90deg)[$ " "#rotate(90deg)[#val] = " "$]$
+#let ev(val) = $#rotate(90deg)[$ " "#rotate(-90deg)[#val] = " "$]$
 #let the = math.supset.sq
+
+#let dist = math.op("dist")
+#let nb(n) = $#numbering("1)", n)$
+#let such = line(angle: 90deg, length: 20pt)
 
 #let box-colors = (
   default: (stroke: luma(70), fill: white, title: white),
