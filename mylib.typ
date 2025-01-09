@@ -11,10 +11,17 @@
 #let prt(x) = $(#pr f) / (#pr #x)$
 #let ev(val) = $#rotate(90deg)[$ " "#rotate(-90deg)[#val] = " "$]$
 #let the = math.supset.sq
-
+#let Int = math.op("Int")
 #let dist = math.op("dist")
 #let nb(n) = $#numbering("1)", n)$
 #let such = line(angle: 90deg, length: 20pt)
+#let sp = h(20pt)
+#let sp2 = h(40pt)
+#let sp3 = h(60pt)
+#let sp4 = h(80pt)
+#let ops = "открытое"
+#let nw = line(angle: 90deg, length: 40pt)
+#let such_as = $" " such " "$
 
 #let box-colors = (
   default: (stroke: luma(70), fill: white, title: white),
