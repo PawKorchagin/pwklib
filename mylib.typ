@@ -291,10 +291,7 @@
 }
 
 
-#let def = "Определение"
-
-#let def(x) = {x
- " Определение"}
+#let def = strong("Определение:")
 
 #let limxy(a, b) = $lim_((x, y) -> (#a, #b))$
 
@@ -303,3 +300,5 @@
 #let so = $#line(angle: 90deg) =>$
 
 #let bc(op, th) = $ limits(#op)_(#th) $
+
+#let Hol = $cal(H o l)$
