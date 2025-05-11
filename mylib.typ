@@ -302,3 +302,5 @@
 #let bc(op, th) = $ limits(#op)_(#th) $
 
 #let Hol = $cal(H o l)$
+#let res = math.op("res")
+
