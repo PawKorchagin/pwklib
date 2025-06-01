@@ -304,3 +304,4 @@
 #let Hol = $cal(H o l)$
 #let res = math.op("res")
 
+#let blink(url, preview) = text(fill: blue)[ #link(url, preview)]
